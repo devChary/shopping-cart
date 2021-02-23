@@ -1,10 +1,12 @@
 import React from 'react';
 
+import './sidenav.styles.scss';
+
 const Sidenav = () => {
     return (
-        <header className="header">
-            I am the sidebar
-        </header>
+        <nav className="sidenav">
+            I am sidenav
+        </nav>
     )
 }
 

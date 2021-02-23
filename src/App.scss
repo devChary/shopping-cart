@@ -1,1 +1,6 @@
-@import './sass/main.scss';
+@import "./sass/main.scss";
+
+.content {
+  display: flex;
+  min-height: 90vh;
+}

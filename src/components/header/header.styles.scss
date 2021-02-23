@@ -1,0 +1,42 @@
+////////////////////////////////////////
+// LOGO
+.logo {
+  height: 4.5rem;
+  margin-left: 1rem;
+}
+
+.header {
+  font-size: 1.4rem;
+  height: 6rem;
+
+  background-color: #fff;
+  box-shadow: var(--shadow-dark);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-nav {
+  &__nav-item {
+    display: none;
+  }
+}
+
+////////////////////////////////////////
+// USER-CART
+.user-cart {
+  display: flex;
+  align-self: stretch;
+  background-color: var(--color-grey-light-3);
+
+  &__logo-box {
+    font-size: 1.8rem;
+    margin-right: 2em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+  }
+}
