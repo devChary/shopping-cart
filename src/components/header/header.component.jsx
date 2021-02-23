@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import { ReactComponent as CartLogo } from '../../../public/static/assets/cart.svg';
+import CartIcon from '../cart-icon/cartIcon.component';
 
 import './header.styles.scss';
 
@@ -10,7 +10,8 @@ const Header = () => {
         fill: '#ba265d',
         width: '4rem',
         height: '4rem',
-        margin: '1rem'
+        margin: '1rem',
+        enableBackground: 'new 0 0 24 24'
     }
 
     return (
@@ -28,7 +29,7 @@ const Header = () => {
 
             <div className="user-cart">
                 <div className="user-cart__logo-box">
-                    {/* <CartLogo style={svgIconStyles} /> */}
+                    <CartIcon style={svgIconStyles} />
                     <span>0 items</span>
                 </div>
             </div>

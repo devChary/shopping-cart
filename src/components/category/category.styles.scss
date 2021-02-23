@@ -1,0 +1,14 @@
+.category {
+  display: flex;
+  justify-content: space-between;
+
+  &__category_image {
+    width: 15rem;
+  }
+
+  &__details-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
