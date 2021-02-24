@@ -4,6 +4,12 @@
   padding: 2rem 1rem;
   margin: 1rem;
 
+  @media only screen and (min-width: 1280px) {
+    justify-content: space-evenly;
+    margin: 1rem 12rem;
+    padding: 2rem 4rem;
+  }
+
   &:not(:last-child) {
     box-shadow: var(--shadow-custom);
   }

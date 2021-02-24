@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import FormInput from '../../components/form-input/form-input.component';
-import CustomButton from '../../components/button/button.component';
+import FormInput from '../../components/UI/atoms/form-input/form-input.component';
+import CustomButton from '../../components/UI/atoms/button/button.component';
 
 import './login.styles.scss';
 
@@ -24,20 +24,23 @@ const LoginPage = () => {
     const handleChange = (e) => {
         const { value, name } = e.target;
 
-        setUser({ [name]: value });
+        setUser({ ...user, [name]: value });
     }
     return (
         <div className="login">
-            <h2 className="login__title">Login</h2>
-            <p className="login__sub-title">Get access to your Orders, Wishlist and Recommendations</p>
 
-            <form className="login__form" onSubmit={handleSubmit}>
+            <div className="login__header">
+                <h2 className="login__title">Login</h2>
+                <p className="login__sub-title">Get access to your Orders, Wishlist and Recommendations</p>
+            </div>
+
+            <form method="post" className="login__form" onSubmit={handleSubmit}>
                 <FormInput
                     name='email'
                     type='email'
                     handleChange={handleChange}
                     value={user.email}
-                    label='email'
+                    label='Email'
                     required
                 />
                 <FormInput
@@ -45,7 +48,7 @@ const LoginPage = () => {
                     type='password'
                     value={user.password}
                     handleChange={handleChange}
-                    label='password'
+                    label='Password'
                     required
                 />
                 <CustomButton style={buttonStyles} type='submit'> Login </CustomButton>
