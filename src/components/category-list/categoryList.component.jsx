@@ -5,7 +5,6 @@ import Category from '../category/category.component';
 import './categoryList.styles.scss';
 
 const CategoryList = (data) => {
-    debugger
     const categories = data.categories;
 
     return (

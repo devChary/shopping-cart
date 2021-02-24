@@ -1,0 +1,21 @@
+.login {
+  margin: 45px auto;
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__form {
+      width: 80vw;
+  }
+
+  &__title {
+    font-size: 4rem;
+  }
+
+  &__sub-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+}

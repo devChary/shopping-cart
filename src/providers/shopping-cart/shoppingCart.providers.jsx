@@ -1,7 +1,13 @@
 import React, { createContext, useState, useEffect } from 'react';
+import {
+    addItemToCart,
+    removeItemFromCart,
+    filterItemFromCart,
+    getCartItemsCount,
+    getCartTotal
+} from './shoppingCart.utils';
 
-
-export const CartContext = createContext({
+export const ShoppingCartContext = createContext({
     cartItems: [],
     addItem: () => { },
     removeItem: () => { },
@@ -10,7 +16,7 @@ export const CartContext = createContext({
     cartTotal: 0
 });
 
-const CartProvider = ({ children }) => {
+const ShoppingCartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
     const [cartItemsCount, setCartItemsCount] = useState(0);
     const [cartTotal, setCartTotal] = useState(0);
@@ -26,7 +32,7 @@ const CartProvider = ({ children }) => {
     }, [cartItems]);
 
     return (
-        <CartContext.Provider
+        <ShoppingCartContext.Provider
             value={{
                 cartItems,
                 addItem,
@@ -37,8 +43,8 @@ const CartProvider = ({ children }) => {
             }}
         >
             {children}
-        </CartContext.Provider>
+        </ShoppingCartContext.Provider>
     );
 }
 
-export default CartProvider;
+export default ShoppingCartProvider;

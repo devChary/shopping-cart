@@ -3,7 +3,6 @@ import React from 'react';
 import './banner.styles.scss';
 
 const Banner = (banner) => {
-    debugger
     const { banner: { bannerImageAlt, bannerImageUrl } } = banner;
     
     return (
