@@ -1,7 +1,10 @@
 ////////////////////////////////////////
 // LOGO
 .logo-container {
-    
+  @media only screen and (min-width: 1280px) {
+    flex: 0 0 50%;
+    display: flex;
+  }
 }
 
 .logo {
@@ -19,11 +22,39 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (min-width: 1280px) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.items-wrapper {
+  display: flex;
+  @media only screen and (min-width: 1280px) {
+    flex: 0 0 25%;
+  }
 }
 
 .user-nav {
   &__nav-item {
     display: none;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+  @media only screen and (min-width: 1280px) {
+    display: flex;
   }
 }
 
