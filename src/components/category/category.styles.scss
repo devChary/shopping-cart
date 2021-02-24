@@ -5,7 +5,8 @@
   margin: 1rem;
 
   &:not(:last-child) {
-    box-shadow: var(--shadow-custom);
+    // box-shadow: var(--shadow-custom);
+    box-shadow: 0 8px 6px -6px gray;
   }
 
   &:nth-child(odd) {

@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import CartIcon from '../cart-icon/cartIcon.component';
+import CartIcon from '../UI/atoms/cart-icon/cartIcon.component';
 
 import './header.styles.scss';
 
@@ -16,7 +17,9 @@ const Header = () => {
 
     return (
         <header className="header">
-            <img src="/static/assets/logo.png" alt="Sabka Bazaar Logo" className="logo" />
+            <Link className="logo-container" to="/">
+                <img src="/static/assets/logo.png" alt="Sabka Bazaar Logo" className="logo" />
+            </Link>
 
             <nav className="user-nav">
                 <div className="user-nav__nav-item">
