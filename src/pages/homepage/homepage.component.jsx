@@ -24,7 +24,7 @@ const Homepage = () => {
     }, [])
 
     return (
-        <main>
+        <main className="homepage">
             {/* { banners.length ? <BannerList banners={banners} /> : null} */}
             <CategoryList categories={categories} />
         </main>

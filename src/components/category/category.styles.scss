@@ -1,14 +1,38 @@
 .category {
   display: flex;
   justify-content: space-between;
+  padding: 2rem 1rem;
+  margin: 1rem;
+
+  &:not(:last-child) {
+    box-shadow: var(--shadow-custom);
+  }
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
 
   &__category_image {
-    width: 15rem;
+    display: flex;
+    width: 13rem;
+    flex: 0 0 30%;
   }
 
   &__details-wrapper {
+    text-align: center;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 13px;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    margin-bottom: 1rem;
   }
 }
