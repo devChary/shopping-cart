@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Category from '../category/category.component';
+import Category from '../../UI/molecules/category/category.component';
 
 import './categoryList.styles.scss';
 

@@ -7,9 +7,8 @@ import './product.styles.scss';
 const Product = (data) => {
 
     const buttonStyles = {
-        marginBottom: '4rem',
         fontSize: '1.5rem',
-        padding: '1.6rem 1rem'
+        padding: '1.6rem 1rem',
     }
 
     const { product } = data;

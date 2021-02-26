@@ -1,10 +1,13 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 
-import CustomButton from '../UI/atoms/button/button.component';
+import CustomButton from '../../atoms/button/button.component';
 
 import './category.styles.scss';
 
 const Category = (category) => {
+    const { history } = useHistory();
+
     const { category: { name, imageUrl, description, key } } = category;
 
     return (
@@ -14,7 +17,7 @@ const Category = (category) => {
             <figcaption className="category__details-wrapper">
                 <h4 className="category__title">{name}</h4>
                 <p className="category__description">{description}</p>
-                <CustomButton>Explore {key}</CustomButton>
+                <CustomButton onClick={() => history.push('/')}>Explore {key}</CustomButton>
             </figcaption>
         </figure>
     )

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import CartIcon from '../UI/atoms/cart-icon/cartIcon.component';
+import CartIcon from '../../atoms/cart-icon/cartIcon.component';
 
 import './header.styles.scss';
 

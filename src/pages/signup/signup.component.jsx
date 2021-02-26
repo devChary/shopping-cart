@@ -31,7 +31,7 @@ const SignupPage = () => {
                 <p className="signup__sub-title">We do not share your personal details with anyone</p>
             </div>
 
-            <form className="signup__form" onSubmit={handleSubmit}>
+            <form method="post" className="signup__form" onSubmit={handleSubmit}>
                 <FormInput
                     name='firstName'
                     type='text'
