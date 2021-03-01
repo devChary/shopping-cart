@@ -10,6 +10,11 @@
 .logo {
   height: 4.5rem;
   margin-left: 1rem;
+
+  @media only screen and (min-width: 1024px) {
+    flex: 0 0 50%;
+    margin-left: 0;
+  }
 }
 
 .header {
@@ -45,7 +50,7 @@
     color: inherit;
 
     &:hover {
-        text-decoration: underline;
+      text-decoration: underline;
     }
 
     @media only screen and (min-width: 768px) {

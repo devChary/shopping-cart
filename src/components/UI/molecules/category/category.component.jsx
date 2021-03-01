@@ -14,11 +14,11 @@ const Category = (category) => {
         <figure className="category">
             <img className="category__category_image" src={imageUrl} alt={name} />
 
-            <figcaption className="category__details-wrapper">
+            <section className="category__details-wrapper">
                 <h4 className="category__title">{name}</h4>
                 <p className="category__description">{description}</p>
                 <CustomButton onClick={() => history.push('/')}>Explore {key}</CustomButton>
-            </figcaption>
+            </section>
         </figure>
     )
 }

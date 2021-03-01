@@ -11,6 +11,11 @@
 
   @media only screen and (min-width: 768px) {
     display: flex;
+    flex: 0 0 20%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    flex: 0 0 25%;
   }
 }
 
