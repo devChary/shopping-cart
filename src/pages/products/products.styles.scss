@@ -1,4 +1,13 @@
 .products-page {
-    display: flex;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 1366px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
+

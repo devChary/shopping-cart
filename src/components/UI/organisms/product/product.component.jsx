@@ -8,23 +8,24 @@ const Product = (data) => {
 
     const buttonStyles = {
         fontSize: '1.5rem',
-        padding: '1.6rem 1rem',
+        padding: '1.5rem 1rem',
+        width: '100%'
     }
 
     const { product } = data;
     return (
         <div className="product">
-            <h1 className="product__name">{product.name}</h1>
+            <h1 className="product__title">{product.name}</h1>
 
-            <figure className="product__details-wrapper">
+            <div className="product__img-wrapper">
                 <img className="product__img" src={product.imageURL} alt={product.name} />
-
-                <figcaption className="product__details">
-                    <p className="product__description">{product.description}</p>
-                    <CustomButtom style={buttonStyles}>Buy Now @ Rs.{product.price}</CustomButtom>
-                </figcaption>
-            </figure>
-        </div>
+            </div>
+            <p className="product__description">{product.description}</p>
+            <div className="product__btn-wrapper">
+                {/* <div className="product__mrp">MRP Rs {product.price}</div> */}
+                <CustomButtom style={buttonStyles}>Buy Now <span className="product__btn-mrp">@ Rs.{product.price}</span></CustomButtom>
+            </div>
+        </div >
     )
 }
 
