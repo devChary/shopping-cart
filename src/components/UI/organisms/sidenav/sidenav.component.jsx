@@ -11,7 +11,7 @@ const Sidenav = () => {
             <ul className="side-nav">
                 {
                     SidenavItems.map(({ name, path, active }) => (
-                        <SidenavItem key={name} name={name} path={path} active={active} />
+                        <SidenavItem key={name} name={name} path={`/products/${path}`} active={active} />
                     ))
                 }
             </ul>
