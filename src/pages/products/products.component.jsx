@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-// import Route from 'react-router-dom';
-
-import Product from '../../components/UI/organisms/product/product.component';
+import React, { useState, useEffect, createContext } from 'react';
+import { Route } from 'react-router-dom';
+import ProductOverview from '../../components/templates/product-overview/productOverview.component'
 
 import './products.styles.scss';
 
-const ProductsPage = ({ match }) => {
+export const ProductsContext = createContext();
 
+const ProductsPage = ({ match }) => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -15,14 +15,13 @@ const ProductsPage = ({ match }) => {
             .then(json => setProducts(json))
             .catch(err => console.log('Request Failed', err))
     }, []);
-
     return (
         <div className='products-page'>
-            {
-                products.length ? products.map(product => (
-                    <Product key={product.id} product={product} />
-                )) : null
-            }
+            <ProductsContext.Provider value={products}>
+                <Route exact path={match.path} component={ProductOverview} />
+                {/* <ProductOverview routeName={match} /> */}
+            </ProductsContext.Provider>
+
         </div>
     )
 }

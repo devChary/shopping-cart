@@ -18,7 +18,7 @@ const Product = (data) => {
             <h1 className="product__title">{product.name}</h1>
 
             <div className="product__img-wrapper">
-                <img className="product__img" src={product.imageURL} alt={product.name} />
+                <img loading="lazy" className="product__img" src={product.imageURL} alt={product.name} />
             </div>
             <p className="product__description">{product.description}</p>
             <div className="product__btn-wrapper">
