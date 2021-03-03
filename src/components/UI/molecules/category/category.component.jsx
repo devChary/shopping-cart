@@ -5,7 +5,6 @@ import CustomButton from '../../atoms/button/button.component';
 import './category.styles.scss';
 
 const Category = (props) => {
-    debugger
     const { category: { name, imageUrl, description, key } } = props;
 
     return (

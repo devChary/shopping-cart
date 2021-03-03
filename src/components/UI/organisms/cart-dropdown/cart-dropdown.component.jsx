@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
 import { withRouter } from 'react-router';
 
-import CustomButton from '../../atoms/button/button.component';
-
 import CartItem from '../../molecules/cart-item/cart-item.component';
 import CartFooter from '../../molecules/cart-footer/cart-footer.component';
 import CartHeader from '../../molecules/cart-header/cart-header.component.jsx';
@@ -20,13 +18,15 @@ const CartDropdown = ({ history }) => {
         <div className='cart-dropdown'>
             <CartHeader />
             <div className='cart-items'>
-                {/* {cartItems.length ? (
-                    cartItems.map(cartItem => (
-                        <CartItem key={cartItem.id} item={cartItem} />
-                    ))
-                ) : (
-                        <span className='empty-message'>Your cart is empty</span>
-                    )} */}
+                {
+                    cartItems.length ? (
+                        cartItems.map(cartItem => (
+                            <CartItem key={cartItem.id} item={cartItem} />
+                        ))
+                    ) : (
+                            <span className='empty-message'>Your cart is empty</span>
+                        )
+                }
             </div>
             <PriceInfo />
             <CartFooter />

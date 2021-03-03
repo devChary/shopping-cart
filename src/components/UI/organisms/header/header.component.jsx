@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import CartDropdown from '../../organisms/cart-dropdown/cart-dropdown.component';
 import CartIcon from '../../atoms/cart-icon/cartIcon.component';
+
+import { ShoppingCartContext } from '../../../../providers/shopping-cart/shoppingCart.providers';
 
 import './header.styles.scss';
 
@@ -15,6 +17,8 @@ const Header = () => {
         margin: '0.75rem',
         enableBackground: 'new 0 0 24 24'
     }
+
+    const { cartItemsCount, hidden, toggleHidden } = useContext(ShoppingCartContext);
 
     return (
         <header className="header">
@@ -46,13 +50,13 @@ const Header = () => {
                     </Link>
                 </div>
                 <div className="user-cart">
-                    <div className="user-cart__logo-box">
+                    <div onClick={toggleHidden} className="user-cart__logo-box">
                         <CartIcon style={svgIconStyles} />
-                        <span>0 items</span>
+                        <span>{cartItemsCount} items</span>
                     </div>
                 </div>
             </div>
-            <CartDropdown />
+            {hidden ? null : <CartDropdown />}
         </header >
     )
 }

@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React, { useContext } from 'react';
+import { ShoppingCartContext } from '../../../../providers/shopping-cart/shoppingCart.providers'
 import CustomButtom from '../../atoms/button/button.component';
 
 import './product.styles.scss';
@@ -13,6 +13,9 @@ const Product = (data) => {
     }
 
     const { product } = data;
+    const { addItem } = useContext(ShoppingCartContext);
+
+
     return (
         <div className="product">
             <h1 className="product__title">{product.name}</h1>
@@ -23,7 +26,7 @@ const Product = (data) => {
             <p className="product__description">{product.description}</p>
             <div className="product__btn-wrapper">
                 {/* <div className="product__mrp">MRP Rs {product.price}</div> */}
-                <CustomButtom style={buttonStyles}>Buy Now <span className="product__btn-mrp">@ Rs.{product.price}</span></CustomButtom>
+                <CustomButtom onClick={() => addItem(product)} style={buttonStyles}>Buy Now <span className="product__btn-mrp">@ Rs.{product.price}</span></CustomButtom>
             </div>
         </div >
     )
