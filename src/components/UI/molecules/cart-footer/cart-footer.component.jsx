@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import CustomButton from '../../atoms/button/button.component';
+
+import { ShoppingCartContext } from '../../../../providers/shopping-cart/shoppingCart.providers';
 
 import './cart-footer.styles.scss'
 
@@ -14,12 +16,14 @@ const CartFooter = () => {
         justifyContent: 'space-between'
     }
 
+    const { cartTotal } = useContext(ShoppingCartContext)
+
     return (
         <div className="cart-footer">
             <p className="cart-footer__promo-code">Promocode can be applied on payment page</p>
             <CustomButton style={styles}>
-                    Proceed to Checkout
-                    <span>Rs.187 &gt;</span>
+                Proceed to Checkout
+                    <span>Rs.{cartTotal} &gt;</span>
             </CustomButton>
         </div>
     )

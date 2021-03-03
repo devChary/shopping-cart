@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 
 import CartDropdown from '../../organisms/cart-dropdown/cart-dropdown.component';
@@ -8,7 +9,7 @@ import { ShoppingCartContext } from '../../../../providers/shopping-cart/shoppin
 
 import './header.styles.scss';
 
-const Header = () => {
+const Header = ({ history }) => {
 
     const svgIconStyles = {
         fill: '#ba265d',
@@ -19,6 +20,14 @@ const Header = () => {
     }
 
     const { cartItemsCount, hidden, toggleHidden } = useContext(ShoppingCartContext);
+
+    const showCart = () => {
+        const screenWidth = window.screen.width;
+        if (screenWidth > 1024) {
+            return toggleHidden();
+        }
+        history.push('/shopping-cart');
+    }
 
     return (
         <header className="header">
@@ -50,7 +59,7 @@ const Header = () => {
                     </Link>
                 </div>
                 <div className="user-cart">
-                    <div onClick={toggleHidden} className="user-cart__logo-box">
+                    <div onClick={showCart} className="user-cart__logo-box">
                         <CartIcon style={svgIconStyles} />
                         <span>{cartItemsCount} items</span>
                     </div>
@@ -61,4 +70,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default withRouter(Header);
