@@ -18,6 +18,4 @@ const CategoryList = (data) => {
     )
 }
 
-
-
 export default CategoryList;

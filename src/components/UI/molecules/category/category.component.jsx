@@ -1,14 +1,12 @@
 import React from 'react';
-import { useHistory } from "react-router-dom";
-
+import { withRouter } from 'react-router';
 import CustomButton from '../../atoms/button/button.component';
 
 import './category.styles.scss';
 
-const Category = (category) => {
-    const { history } = useHistory();
-
-    const { category: { name, imageUrl, description, key } } = category;
+const Category = (props) => {
+    debugger
+    const { category: { name, imageUrl, description, key } } = props;
 
     return (
         <figure className="category">
@@ -17,10 +15,10 @@ const Category = (category) => {
             <section className="category__details-wrapper">
                 <h4 className="category__title">{name}</h4>
                 <p className="category__description">{description}</p>
-                <CustomButton onClick={() => history.push('/')}>Explore {key}</CustomButton>
+                <CustomButton onClick={() => props.history.push(`/products/${key}`)}>Explore {key}</CustomButton>
             </section>
         </figure>
     )
 }
 
-export default Category;
+export default withRouter(Category);
