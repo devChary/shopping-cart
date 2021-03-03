@@ -8,6 +8,8 @@ import {
 } from './shoppingCart.utils';
 
 export const ShoppingCartContext = createContext({
+    hidden: true,
+    toggleHidden: () => { },
     cartItems: [],
     addItem: () => { },
     removeItem: () => { },
@@ -17,12 +19,14 @@ export const ShoppingCartContext = createContext({
 });
 
 const ShoppingCartProvider = ({ children }) => {
+    const [hidden, setHidden] = useState(true);
     const [cartItems, setCartItems] = useState([]);
     const [cartItemsCount, setCartItemsCount] = useState(0);
     const [cartTotal, setCartTotal] = useState(0);
 
     const addItem = item => setCartItems(addItemToCart(cartItems, item));
     const removeItem = item => setCartItems(removeItemFromCart(cartItems, item));
+    const toggleHidden = () => setHidden(!hidden);
     const clearItemFromCart = item =>
         setCartItems(filterItemFromCart(cartItems, item));
 
@@ -34,6 +38,8 @@ const ShoppingCartProvider = ({ children }) => {
     return (
         <ShoppingCartContext.Provider
             value={{
+                hidden,
+                toggleHidden,
                 cartItems,
                 addItem,
                 removeItem,

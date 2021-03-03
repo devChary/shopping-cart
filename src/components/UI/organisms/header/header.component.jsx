@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import CartDropdown from '../../organisms/cart-dropdown/cart-dropdown.component';
 import CartIcon from '../../atoms/cart-icon/cartIcon.component';
 
 import './header.styles.scss';
@@ -32,7 +33,6 @@ const Header = () => {
                     <Link className="user-nav__nav-item" to="/products">
                         Products
                     </Link>
-
                 </nav>
             </div>
 
@@ -52,7 +52,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-
+            <CartDropdown />
         </header >
     )
 }

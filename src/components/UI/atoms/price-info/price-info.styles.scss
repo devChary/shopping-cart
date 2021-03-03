@@ -1,0 +1,18 @@
+.price-info {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #fff;
+  border-radius: 0.3rem;
+
+  display: flex;
+  align-items: center;
+  &__img {
+    width: 100%;
+    max-width: 9rem;
+  }
+
+  &__tagline {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+  }
+}
