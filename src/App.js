@@ -1,4 +1,4 @@
-import { Switch, Route } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 
 // Layout Components
 import Header from './components/UI/organisms/header/header.component';

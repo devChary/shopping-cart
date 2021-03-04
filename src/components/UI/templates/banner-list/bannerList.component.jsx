@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Banner from '../../UI/molecules/banner/banner.component';
+import Banner from '../../molecules/banner/banner.component';
 
 import './bannerList.styles.scss';
 

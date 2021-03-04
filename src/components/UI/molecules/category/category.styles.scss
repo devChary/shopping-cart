@@ -10,6 +10,10 @@
     padding: 2rem 4rem;
   }
 
+  @media only screen and (min-width: 768px) {
+    justify-content: space-around;
+  }
+
   &:not(:last-child) {
     box-shadow: var(--shadow-custom);
   }
@@ -31,6 +35,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.2rem;
+      flex: 0 0 50%;
+    }
   }
 
   &__title {

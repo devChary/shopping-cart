@@ -1,8 +1,8 @@
 import React, { useState, useEffect, createContext } from 'react';
 import { Route } from 'react-router-dom';
 
-import ProductOverview from '../../components/templates/product-overview/productOverview.component';
-import CategoryItems from '../../components/templates/category-items/categoryItems.component';
+import ProductOverview from '../../components/UI/templates/product-overview/productOverview.component';
+import CategoryItems from '../../components/UI/templates/category-items/categoryItems.component';
 
 import './products.styles.scss';
 

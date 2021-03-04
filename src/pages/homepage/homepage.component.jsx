@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-import BannerList from '../../components/templates/banner-list/bannerList.component';
-import CategoryList from '../../components/templates/category-list/categoryList.component';
+import BannerList from '../../components/UI/templates/banner-list/bannerList.component';
+import CategoryList from '../../components/UI/templates/category-list/categoryList.component';
 
 import './homepage.styles.scss';
 
