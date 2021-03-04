@@ -12,7 +12,7 @@ const CartItem = ({ item }) => {
 
     const buttonStyles = {
         borderRadius: '0.4rem',
-        padding: '0.2rem 1rem',
+        padding: '0.5rem 1.2rem',
         fontSize: '1.2rem'
     }
 

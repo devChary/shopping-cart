@@ -3,12 +3,3 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
 }
-
-.content {
-  display: flex;
-  
-  @media screen and (min-width: 1024px){
-    max-width: 1024px;
-    margin: auto;
-  }
-}
