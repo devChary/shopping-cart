@@ -8,7 +8,7 @@ const CartHeader = () => {
 
     const { cartItemsCount } = useContext(ShoppingCartContext);
     const screenWidth = window.screen.width;
-    const cartClass = screenWidth < 1024 ? 'small' : 'large';
+    const cartClass = screenWidth <= 1024 ? 'small' : 'large';
 
     return (
         <header className={`cart-header ${cartClass}`}>

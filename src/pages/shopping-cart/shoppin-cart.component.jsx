@@ -12,18 +12,13 @@ import './shopping-cart.styles.scss';
 const ShoppingCartPage = () => {
     const { cartItems } = useContext(ShoppingCartContext);
 
-    const bgColor = {
-        white: { backgroundColor: '#fff' },
-        lightGrey: { backgroundColor: '#f4f2f2' },
-    }
-
     return (
-        <div className="cart-page" style={cartItems.length ? bgColor.lightGrey : bgColor.white}>
+        <div className="cart-page">
             {
                 cartItems.length ? <CartHeader /> : null
             }
 
-            <div className='cart-page__cart-items'>
+            <div className='cart-page__cart-items' style={!cartItems.length ? {maxHeight: '100%'}: {}}>
                 {
                     cartItems.length ? (
                         cartItems.map(cartItem => (

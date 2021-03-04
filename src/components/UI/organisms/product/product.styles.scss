@@ -7,6 +7,7 @@
   display: grid;
   grid-gap: 2.5rem;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.75fr 2fr 0.5fr;
   grid-template-areas:
     "product__title product__title"
     "product__img product__description"
