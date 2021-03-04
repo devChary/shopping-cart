@@ -28,7 +28,9 @@ const ShoppingCartProvider = ({ children }) => {
         setCartItems(addItemToCart(cartItems, item))
     };
     const removeItem = item => setCartItems(removeItemFromCart(cartItems, item));
-    const toggleHidden = () => setHidden(!hidden);
+    const toggleHidden = () => {
+        setHidden(!hidden);
+    };
     const clearItemFromCart = item =>
         setCartItems(filterItemFromCart(cartItems, item));
 
