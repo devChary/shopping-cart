@@ -1,29 +1,20 @@
 import React, { useContext } from 'react';
 
 import CartHeader from '../../components/UI/molecules/cart-header/cart-header.component';
-import CartFooter from '../../components/UI/molecules/cart-footer/cart-footer.component';
 import CartItem from '../../components/UI/molecules/cart-item/cart-item.component';
-import PriceInfo from '../../components/UI/atoms/price-info/price-info.component';
+import EmptyCartMessage from '../../components/UI/atoms/empty-message/empty-message.component';
+import EmptyCartFooterOverview from '../../components/UI/templates/empty-cart-footer-overview/footer-overview.component';
 
 import { ShoppingCartContext } from '../../providers/shopping-cart/shoppingCart.providers';
 
 import './shopping-cart.styles.scss';
-import CustomButtom from '../../components/UI/atoms/button/button.component';
 
-const ShoppingCartPage = ({history}) => {
+const ShoppingCartPage = () => {
     const { cartItems } = useContext(ShoppingCartContext);
 
     const bgColor = {
         white: { backgroundColor: '#fff' },
         lightGrey: { backgroundColor: '#f4f2f2' },
-    }
-
-    const styles = {
-        borderRadius: '0.3rem',
-        padding: '1.3rem 1rem',
-        fontSize: '1.4rem',
-        margin: '1rem',
-        marginTop: 'auto'
     }
 
     return (
@@ -39,20 +30,11 @@ const ShoppingCartPage = ({history}) => {
                             <CartItem key={cartItem.id} item={cartItem} />
                         ))
                     ) : (
-                            <div className='cart-page__empty-message'>
-                                <h3>No items in your cart</h3>
-                                <p>Your favourite items are just a click away</p>
-                            </div>
+                            <EmptyCartMessage />
                         )
                 }
             </div>
-            { cartItems.length ?
-                <>
-                    <PriceInfo />
-                    <CartFooter />
-                </>
-                : <CustomButtom onClick={() => history.push('/products')} style={styles}>Start Shopping</CustomButtom>
-            }
+            <EmptyCartFooterOverview cartItems={cartItems} />
         </div>
     )
 }

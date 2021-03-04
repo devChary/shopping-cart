@@ -22,10 +22,8 @@ const Header = ({ history }) => {
     const { cartItemsCount, hidden, toggleHidden } = useContext(ShoppingCartContext);
 
     const showCart = () => {
-        debugger
         const screenWidth = window.screen.width;
         if (screenWidth > 1024) {
-            debugger
             if (!hidden) {
                 // document.body.style.backgroundColor = 'transparent';
                 document.body.style.overflow = "scroll";

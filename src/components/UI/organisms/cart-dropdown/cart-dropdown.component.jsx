@@ -2,15 +2,15 @@ import React, { useContext } from 'react';
 import { withRouter } from 'react-router';
 
 import CartItem from '../../molecules/cart-item/cart-item.component';
-import CartFooter from '../../molecules/cart-footer/cart-footer.component';
 import CartHeader from '../../molecules/cart-header/cart-header.component.jsx';
-import PriceInfo from '../../atoms/price-info/price-info.component.jsx';
+import EmptyCartMessage from '../../atoms/empty-message/empty-message.component';
+import EmptyCartFooterOverview from '../../templates/empty-cart-footer-overview/footer-overview.component';
 
 import { ShoppingCartContext } from '../../../../providers/shopping-cart/shoppingCart.providers';
 
 import './cart-dropdown.styles.scss'
 
-const CartDropdown = ({ history }) => {
+const CartDropdown = () => {
 
     const { cartItems, toggleHidden } = useContext(ShoppingCartContext);
 
@@ -24,12 +24,11 @@ const CartDropdown = ({ history }) => {
                             <CartItem key={cartItem.id} item={cartItem} />
                         ))
                     ) : (
-                            <span className='empty-message'>Your cart is empty</span>
+                            <EmptyCartMessage />
                         )
                 }
             </div>
-            <PriceInfo />
-            <CartFooter />
+            <EmptyCartFooterOverview cartItems={cartItems} />
         </div>
     )
 }

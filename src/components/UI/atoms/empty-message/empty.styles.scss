@@ -1,0 +1,10 @@
+.empty-message {
+  font-size: 1.8rem;
+  margin: 50% auto;
+  text-align: center;
+
+  @media screen and (min-width: 1366px) {
+    font-size: 1.5rem;
+    
+  }
+}

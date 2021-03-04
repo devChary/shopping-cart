@@ -13,7 +13,7 @@ const CartHeader = () => {
     return (
         <header className={`cart-header ${cartClass}`}>
             <h3>My Cart</h3>
-            <span> ({cartItemsCount} item)</span>
+            <span> {cartItemsCount > 0 ? `( ${cartItemsCount}  item)` : ''}</span>
         </header>
     )
 }

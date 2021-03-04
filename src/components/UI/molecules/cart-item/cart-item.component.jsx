@@ -10,11 +10,19 @@ const CartItem = ({ item }) => {
 
     const { imageURL, price, name, quantity } = item;
 
-    const buttonStyles = {
+    const buttonStylesSmall = {
         borderRadius: '0.4rem',
         padding: '0.5rem 1.2rem',
         fontSize: '1.2rem'
     }
+
+    const buttonStylesLarge = {
+        borderRadius: '50%',
+        fontSize: '0.8rem',
+        padding: '0.5rem 0.8rem',
+    }
+
+    const styles = window.screen.width < 1024 ? buttonStylesSmall : buttonStylesLarge;
 
     const { addItem, removeItem } = useContext(ShoppingCartContext);
 
@@ -25,9 +33,9 @@ const CartItem = ({ item }) => {
                 <h4 className='cart-item__name'>{name}</h4>
                 <div className='cart-item__inner-wrapper'>
                     <div className="cart-item__action-items">
-                        <CustomButton onClick={() => removeItem(item)} style={buttonStyles}> &#8722; </CustomButton>
+                        <CustomButton onClick={() => removeItem(item)} style={styles}> &#8722; </CustomButton>
                         <span>{quantity}</span>
-                        <CustomButton onClick={() => addItem(item)} style={buttonStyles}> + </CustomButton>
+                        <CustomButton onClick={() => addItem(item)} style={styles}> + </CustomButton>
                         <span>x</span>
                         <span>${price}</span>
                     </div>
