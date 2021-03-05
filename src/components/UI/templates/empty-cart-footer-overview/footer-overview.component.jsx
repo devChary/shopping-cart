@@ -21,15 +21,12 @@ const EmptyCartFooterOverview = ({ cartItems, history }) => {
 
     const handleAction = () => {
         const screenWidth = window.screen.width;
-        history.push('/products');
+        const pathname = history.location.pathname;
+
         if (screenWidth > 1024) {
-            if (!hidden) {
-                document.body.style.overflow = "scroll";
-            } else {
-                document.body.style.overflow = "hidden";
-            }
             toggleHidden();
         }
+        return !pathname.includes('/products') ? history.push('/products') : null;
     }
 
     return (

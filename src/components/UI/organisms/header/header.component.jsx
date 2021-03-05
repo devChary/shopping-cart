@@ -23,17 +23,13 @@ const Header = ({ history }) => {
 
     const showCart = () => {
         const screenWidth = window.screen.width;
-        if (screenWidth > 1024) {
-            if (!hidden) {
-                // document.body.style.backgroundColor = 'transparent';
-                document.body.style.overflow = "scroll";
-            } else {
-                // document.body.style.filter = 'blur(4px)';
-                document.body.style.overflow = "hidden";
-            }
-            return toggleHidden();
+        if (screenWidth <= 1024) {
+            history.push('/shopping-cart');
+            return;
         }
-        history.push('/shopping-cart');
+        toggleHidden();
+
+
     }
 
     return (

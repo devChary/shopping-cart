@@ -30,6 +30,16 @@ const ShoppingCartProvider = ({ children }) => {
     const removeItem = item => setCartItems(removeItemFromCart(cartItems, item));
     const toggleHidden = () => {
         setHidden(!hidden);
+        const screenWidth = window.screen.width;
+        if (screenWidth > 1024) {
+            if (!hidden) {
+                // document.body.style.backgroundColor = 'transparent';
+                document.body.style.overflow = "scroll";
+            } else {
+                // document.body.style.filter = 'blur(4px)';
+                document.body.style.overflow = "hidden";
+            }
+        }
     };
     const clearItemFromCart = item =>
         setCartItems(filterItemFromCart(cartItems, item));

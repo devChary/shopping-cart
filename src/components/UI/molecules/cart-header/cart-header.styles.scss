@@ -1,11 +1,17 @@
 .cart-header {
   display: flex;
   align-items: center;
-  padding: 1.5rem;
+  justify-content: space-between;
+  padding: 1rem;
   font-size: 2rem;
 
   @media screen and (min-width: 1280px) {
     font-size: 1.6rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
   }
 
   span {
