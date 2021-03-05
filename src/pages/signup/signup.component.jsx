@@ -38,6 +38,7 @@ const SignupPage = () => {
                     handleChange={handleChange}
                     value={user.firstName}
                     label='First Name'
+                    aria-label="First Name"
                     required
                 />
                 <FormInput
@@ -46,6 +47,7 @@ const SignupPage = () => {
                     value={user.lastName}
                     handleChange={handleChange}
                     label='Last Name'
+                    aria-label="Lastname"
                     required
                 />
                 <FormInput
@@ -54,6 +56,7 @@ const SignupPage = () => {
                     value={user.email}
                     handleChange={handleChange}
                     label='Email'
+                    aria-label="Email"
                     required
                 />
                 <FormInput

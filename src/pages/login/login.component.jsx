@@ -41,6 +41,7 @@ const LoginPage = () => {
                     handleChange={handleChange}
                     value={user.email}
                     label='Email'
+                    aria-label="Email"
                     required
                 />
                 <FormInput
@@ -49,6 +50,7 @@ const LoginPage = () => {
                     value={user.password}
                     handleChange={handleChange}
                     label='Password'
+                    aria-label="Password"
                     required
                 />
                 <CustomButton style={buttonStyles} type='submit'> Login </CustomButton>

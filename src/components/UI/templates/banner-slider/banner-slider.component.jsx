@@ -6,14 +6,15 @@ import Slider from "react-slick";
 
 
 const BannerSlider = ({ banners }) => {
+    const screenWidth = window.screen.width;
 
-    var settings = {
+    const settings = {
         dots: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         className: 'gallery',
-        arrows: true,
+        arrows: screenWidth < 500 ? false : true,
         infinite: true,
     };
 
