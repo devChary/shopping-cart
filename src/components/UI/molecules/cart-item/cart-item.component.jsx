@@ -30,17 +30,17 @@ const CartItem = ({ item }) => {
         <div className='cart-item'>
             <img className="cart-item__img" src={imageURL} alt={name} />
             <div className='cart-item__details'>
-                <h4 className='cart-item__name'>{name}</h4>
+                <h4 tabIndex="0" className='cart-item__name'>{name}</h4>
                 <div className='cart-item__inner-wrapper'>
                     <div className="cart-item__action-items">
                         <CustomButton aria-label={`Decrease ${name} quantity by 1`} onClick={() => removeItem(item)} style={styles}> &#8722; </CustomButton>
-                        <span>{quantity}</span>
+                        <span tabIndex="0" aria-label={`Current quantity ${quantity}`}>{quantity}</span>
                         <CustomButton aria-label={`Increase ${name} quantity by 1`} onClick={() => addItem(item)} style={styles}> + </CustomButton>
                         <span>x</span>
                         <span>${price}</span>
                     </div>
 
-                    <div className="cart-item__total">${quantity * price}</div>
+                    <div tabIndex="0" aria-label={`Item total ${price}`} className="cart-item__total">${quantity * price}</div>
                 </div>
             </div>
         </div>

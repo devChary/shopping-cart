@@ -63,6 +63,7 @@ const SignupPage = () => {
                     handleChange={handleChange}
                     label='Password'
                     required
+                    aria-label="Password should have atleast one Capitalcase and one smallcase alphabet, one number and special character, the length should be atleast 13 characters for a strong password"
                 />
                 <FormInput
                     name='confirmPassword'
@@ -71,6 +72,7 @@ const SignupPage = () => {
                     handleChange={handleChange}
                     label='Confirm Password'
                     required
+                    aria-label="Confirm Password should be exactly the same as the password enter above"
                 />
                 <CustomButton style={buttonStyles} type='submit'> Signup </CustomButton>
             </form >

@@ -13,7 +13,7 @@ const Category = (props) => {
 
             <section className="category__details-wrapper">
                 <h4 className="category__title">{name}</h4>
-                <p className="category__description">{description}</p>
+                <p tabIndex="0" className="category__description">{description}</p>
                 <CustomButton onClick={() => props.history.push(`/products/${key}`)}>Explore {key}</CustomButton>
             </section>
         </figure>

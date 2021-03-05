@@ -18,9 +18,9 @@ const CartHeader = () => {
 
     return (
         <header className={`cart-header ${cartClass}`}>
-            <div className="cart-header__wrapper">
+            <div tabIndex="0" aria-label={`My cart has ${cartItemsCount} items`} className="cart-header__wrapper">
                 <h3>My Cart</h3>
-                <span> {cartItemsCount > 0 ? `( ${cartItemsCount}  item)` : ''}</span>
+                <span aria-live="polite"> {cartItemsCount > 0 ? `( ${cartItemsCount}  item)` : ''}</span>
             </div>
 
             {screenWidth > 1024 && <CustomButton style={buttonStyles} aria-label="Close Popup" onClick={toggleHidden}>X</CustomButton>}
