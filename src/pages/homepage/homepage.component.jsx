@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import BannerList from '../../components/UI/templates/banner-list/bannerList.component';
+import BannerSlider from '../../components/UI/templates/banner-slider/banner-slider.component';
 import CategoryList from '../../components/UI/templates/category-list/categoryList.component';
 
 import './homepage.styles.scss';
@@ -22,10 +22,9 @@ const Homepage = () => {
             .then(json => setCategories(json))
             .catch(err => console.log('Request Failed', err))
     }, [])
-
     return (
         <main className="homepage">
-            {/* { banners.length ? <BannerList banners={banners} /> : null} */}
+            <BannerSlider banners={banners} />
             <CategoryList categories={categories} />
         </main>
     )

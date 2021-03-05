@@ -8,7 +8,7 @@ import './route-wrapper.styles.scss';
 export const WithSidebarRoute = ({ component: Component, ...rest }) => {
     return (
         <Route {...rest} component={(props) => (
-            <div className="content">
+            <div className="content" style={{ display: 'flex' }}>
                 <Sidenav /> {/* Sidebar ALWAYS VISIBLE */}
                 <Component {...props} />
             </div>
