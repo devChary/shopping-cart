@@ -1,0 +1,29 @@
+.nav-icon {
+//   margin: 0 auto;
+  width: 40px;
+  cursor: pointer;
+
+  div,
+  &:after,
+  &:before {
+    content: "";
+    background: var(--color-primary-dark);
+    @include border-radius(3px);
+    height: 5px;
+    display: block;
+    margin: 7px 0;
+    @include transition(all 0.2s ease-in-out);
+  }
+
+  &:hover:before {
+    @include transform(translateY(12px) rotate(135deg));
+  }
+
+  &:hover:after {
+    @include transform(translateY(-12px) rotate(-135deg));
+  }
+
+  &:hover div {
+    @include transform(scale(0));
+  }
+}

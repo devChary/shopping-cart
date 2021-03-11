@@ -14,7 +14,8 @@ service.interceptors.request.use(config => {
 
 // Handling Error Responses
 service.interceptors.response.use(response => {
-    return response.data;
+    // return response.data;
+    throw new Error('API Error!');
 }, err => {
     return Promise.reject(err);
 });

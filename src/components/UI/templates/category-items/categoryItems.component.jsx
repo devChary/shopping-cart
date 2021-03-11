@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
-import { ProductsContext } from '../../../../pages/products/products.component';
+import React from 'react';
 
-import Product from '../../organisms/product/product.component';
+import { Product } from 'components/UI/organisms';
 
 import './categoryItems.styles.scss';
 
-const CategoryItems = ({ match }) => {
+const CategoryItems = ({ routeProps, products }) => {
 
-    const products = useContext(ProductsContext);
+    const { match } = routeProps;
+
     return (
         <div className="category-items">
             {

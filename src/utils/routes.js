@@ -1,6 +1,6 @@
 import Homepage from "../pages/homepage/homepage.component";
 import LoginPage from "../pages/login/login.component";
-import ProductsPage from "../pages/products/products.component";
+import ProductsPage from "../pages/products/products";
 import SignupPage from "../pages/signup/signup.component";
 import ShoppingCartPage from "../pages/shopping-cart/shoppin-cart.component";
 

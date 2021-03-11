@@ -1,11 +1,9 @@
-import React, { useContext } from 'react';
-import { ProductsContext } from '../../../../pages/products/products.component';
-import Product from '../../organisms/product/product.component';
+import React from 'react';
+import { Product } from 'components/UI/organisms';
 
 import './productOverview.styles.scss';
 
-const ProductOverview = ({ routeName }) => {
-    const products = useContext(ProductsContext)
+const ProductOverview = ({ products }) => {
     return (
         <div className="products-overview">
             {

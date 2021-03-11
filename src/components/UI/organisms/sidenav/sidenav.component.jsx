@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SidenavItem from '../../atoms/sidenav-item/sidenav-item.component';
+import { SidenavItem } from 'components/UI/atoms';
 import { SidenavItems } from './sidenav.items';
 
 import './sidenav.styles.scss';

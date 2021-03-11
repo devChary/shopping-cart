@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 import { withRouter } from 'react-router';
 
-import CartItem from '../../molecules/cart-item/cart-item.component';
-import CartHeader from '../../molecules/cart-header/cart-header.component.jsx';
-import EmptyCartMessage from '../../atoms/empty-message/empty-message.component';
-import EmptyCartFooterOverview from '../../templates/empty-cart-footer-overview/footer-overview.component';
+import { CartHeader, CartItem } from 'components/UI/molecules';
+import { EmptyCartMessage } from 'components/UI/atoms';
+import { EmptyCartFooterOverview } from 'components/UI/templates';
 
 import { ShoppingCartContext } from '../../../../providers/shopping-cart/shoppingCart.providers';
 

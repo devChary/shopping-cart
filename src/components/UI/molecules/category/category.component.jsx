@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import CustomButton from '../../atoms/button/button.component';
+import { CustomButton } from 'components/UI/atoms';
 
 import './category.styles.scss';
 

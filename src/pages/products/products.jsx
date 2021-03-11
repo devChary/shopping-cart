@@ -1,8 +1,8 @@
 import React, { useState, useEffect, createContext } from 'react';
 import { Route } from 'react-router-dom';
 
-import ProductOverview from '../../components/UI/templates/product-overview/productOverview.component';
-import CategoryItems from '../../components/UI/templates/category-items/categoryItems.component';
+import { ProductOverview } from 'components/UI/templates';
+import { CategoryItems } from 'components/UI/templates';
 
 import './products.styles.scss';
 
@@ -20,8 +20,11 @@ const ProductsPage = ({ match }) => {
     return (
         <div className='products-page'>
             <ProductsContext.Provider value={products}>
-                <Route exact path={`${match.path}`} component={ProductOverview} />
-                <Route path={`${match.path}/:categoryName`} component={CategoryItems} />
+                <Route exact path={`${match.path}`} component={() =>
+                    <ProductOverview products={products} />} />
+
+                <Route path={`${match.path}/:categoryName`} component={(routeProps) =>
+                    <CategoryItems products={products} routeProps={routeProps} />} />
             </ProductsContext.Provider>
         </div>
     )

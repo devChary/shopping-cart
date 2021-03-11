@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
 import { withRouter } from 'react-router';
 
-import CartFooter from '../../molecules/cart-footer/cart-footer.component';
-import PriceInfo from '../../atoms/price-info/price-info.component';
-import CustomButton from '../../atoms/button/button.component';
+import { CartFooter } from 'components/UI/molecules';
+import { PriceInfo, CustomButton } from 'components/UI/atoms';
 
 import { ShoppingCartContext } from '../../../../providers/shopping-cart/shoppingCart.providers';
 

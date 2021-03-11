@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 
-import CartDropdown from '../../organisms/cart-dropdown/cart-dropdown.component';
-import CartIcon from '../../atoms/cart-icon/cartIcon.component';
+import { CartDropdown } from 'components/UI/organisms';
+import { NavIcon, CartIcon } from 'components/UI/atoms';
 
 import { ShoppingCartContext } from '../../../../providers/shopping-cart/shoppingCart.providers';
 
@@ -20,16 +20,13 @@ const Header = ({ history }) => {
     }
 
     const { cartItemsCount, hidden, toggleHidden } = useContext(ShoppingCartContext);
-
+    const screenWidth = window.screen.width;
     const showCart = () => {
-        const screenWidth = window.screen.width;
         if (screenWidth <= 1024) {
             history.push('/shopping-cart');
             return;
         }
         toggleHidden();
-
-
     }
 
     return (
@@ -41,6 +38,8 @@ const Header = ({ history }) => {
                         src="/static/assets/logo.png"
                         alt="Sabka Bazaar Logo" /> */}
                 </Link>
+
+                <NavIcon />
 
                 <nav className="user-nav">
                     <Link className="user-nav__nav-item" to="/">
