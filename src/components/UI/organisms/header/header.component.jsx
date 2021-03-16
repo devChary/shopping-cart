@@ -20,8 +20,8 @@ const Header = ({ history }) => {
     }
 
     const { cartItemsCount, hidden, toggleHidden } = useContext(ShoppingCartContext);
-    const screenWidth = window.screen.width;
     const showCart = () => {
+        const screenWidth = window.screen.width;
         if (screenWidth <= 1024) {
             history.push('/shopping-cart');
             return;
