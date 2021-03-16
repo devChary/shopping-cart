@@ -33,10 +33,9 @@ const Header = ({ history }) => {
         <header className="header">
             <div className="items-wrapper">
                 <Link className="logo-container" to="/">
-                    <img src="/static/assets/logo.png" alt="Sabka Bazaar Logo" className="logo" />
-                    {/* <img srcSet="/static/assets/logo.png 0.5x, /static/assets/logo_2x.png 2x"
+                    <img className="logo" srcSet="/static/assets/logo_2x.png 768w, /static/assets/logo.png 480w"
                         src="/static/assets/logo.png"
-                        alt="Sabka Bazaar Logo" /> */}
+                        alt="Sabka Bazaar Logo" />
                 </Link>
 
                 <NavIcon />

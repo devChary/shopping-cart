@@ -33,6 +33,10 @@
   height: 4.5rem;
   margin-left: 1rem;
 
+  @media only screen and (min-width: 768px) {
+    height: 6.5rem;
+  }
+
   @media only screen and (min-width: 1024px) {
     flex: 0 0 50%;
     margin-left: 0;
