@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { fetchData } from '../../utils/api-methods/api-methods';
 
-import BannerSlider from '../../components/UI/templates/banner-slider/banner-slider.component';
-import CategoryList from '../../components/UI/templates/category-list/categoryList.component';
+import { BannerSlider, CategoryList } from 'components/UI/molecules';
 
 import './homepage.styles.scss';
 
@@ -10,18 +10,17 @@ const Homepage = () => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/banners`)
-            .then(res => res.json())
-            .then(json => setBanners(json))
-            .catch(err => console.log('Request Failed', err));
+        apiRequest();
     }, []);
 
-    useEffect(() => {
-        fetch(`http://localhost:5000/categories`)
-            .then(res => res.json())
-            .then(json => setCategories(json))
-            .catch(err => console.log('Request Failed', err))
-    }, [])
+    const apiRequest = async () => {
+        const bannerArr = await fetchData(`/banners`);
+        setBanners(bannerArr)
+
+        const categoryArr = await fetchData('/categories');
+        setCategories(categoryArr);
+    }
+
     return (
         <main className="homepage">
             <BannerSlider banners={banners} />

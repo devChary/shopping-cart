@@ -3,7 +3,7 @@ import { withRouter } from 'react-router';
 
 import { CartHeader, CartItem } from 'components/UI/molecules';
 import { EmptyCartMessage } from 'components/UI/atoms';
-import { EmptyCartFooterOverview } from 'components/UI/templates';
+import { EmptyCartFooterOverview } from 'components/UI/organisms';
 
 import { ShoppingCartContext } from '../../../../providers/shopping-cart/shoppingCart.providers';
 
@@ -23,8 +23,8 @@ const CartDropdown = () => {
                             <CartItem key={cartItem.id} item={cartItem} />
                         ))
                     ) : (
-                            <EmptyCartMessage />
-                        )
+                        <EmptyCartMessage />
+                    )
                 }
             </div>
             <EmptyCartFooterOverview cartItems={cartItems} />

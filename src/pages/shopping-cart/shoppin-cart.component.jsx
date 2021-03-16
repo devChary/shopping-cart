@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { CartHeader } from 'components/UI/molecules';
 import { CartItem } from 'components/UI/molecules';
 import { EmptyCartMessage } from 'components/UI/atoms';
-import { EmptyCartFooterOverview } from 'components/UI/templates';
+import { EmptyCartFooterOverview } from 'components/UI/organisms';
 
 import { ShoppingCartContext } from '../../providers/shopping-cart/shoppingCart.providers';
 

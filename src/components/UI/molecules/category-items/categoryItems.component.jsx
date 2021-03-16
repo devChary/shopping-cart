@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import { Product } from 'components/UI/organisms';
 
@@ -21,4 +21,4 @@ const CategoryItems = ({ routeProps, products }) => {
     )
 }
 
-export default CategoryItems;
+export default memo(CategoryItems);

@@ -1,0 +1,27 @@
+.banner {
+  margin-top: 2.5rem;
+  width: 95%;
+  box-shadow: var(--shadow-custom);
+
+  @media screen and (min-width: 768px) {
+    width: 76%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 60%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 78%;
+  }
+}
+
+.banner > .gallery > .slick-dots {
+  @media screen and (min-width: 768px) {
+    bottom: 5px;
+  }
+
+  @media screen and (min-width: 768px) {
+    bottom: 5px;
+  }
+}

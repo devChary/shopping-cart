@@ -1,8 +1,10 @@
 import axios from 'axios';
 
+const base_url = `http://localhost:5000`;
+
 // Adding Base URL as per enviroment
 const service = axios.create({
-    baseURL: API_URL
+    baseURL: base_url
 });
 
 // Handling header authorization
@@ -14,8 +16,9 @@ service.interceptors.request.use(config => {
 
 // Handling Error Responses
 service.interceptors.response.use(response => {
-    // return response.data;
-    throw new Error('API Error!');
+    return response.data;
 }, err => {
     return Promise.reject(err);
 });
+
+export default service;

@@ -1,8 +1,9 @@
 import React, { useState, useEffect, createContext } from 'react';
 import { Route } from 'react-router-dom';
+import { fetchData } from '../../utils/api-methods/api-methods';
 
-import { ProductOverview } from 'components/UI/templates';
-import { CategoryItems } from 'components/UI/templates';
+import { ProductOverview } from 'components/UI/molecules';
+import { CategoryItems } from 'components/UI/molecules';
 
 import './products.styles.scss';
 
@@ -12,11 +13,14 @@ const ProductsPage = ({ match }) => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products`)
-            .then(res => res.json())
-            .then(json => setProducts(json))
-            .catch(err => console.log('Request Failed', err))
+        apiRequest();
     }, []);
+
+    const apiRequest = async () => {
+        const productsArr = await fetchData('/products');
+        setProducts(productsArr);
+    }
+
     return (
         <div className='products-page'>
             <ProductsContext.Provider value={products}>
