@@ -1,8 +1,8 @@
-import Homepage from "../pages/homepage/homepage.component";
-import LoginPage from "../pages/login/login.component";
-import ProductsPage from "../pages/products/products";
-import SignupPage from "../pages/signup/signup.component";
-import ShoppingCartPage from "../pages/shopping-cart/shoppin-cart.component";
+import Homepage from "pages/homepage";
+import LoginPage from "pages/login";
+import ProductsPage from "pages/products";
+import SignupPage from "pages/signup";
+import ShoppingCartPage from "pages/shopping-cart";
 
 const routes = {
 

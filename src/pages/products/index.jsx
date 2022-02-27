@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext } from 'react';
 import { Route } from 'react-router-dom';
-import { fetchData } from '../../utils/api-methods/api-methods';
+import  {fetchData} from 'utils/api-methods';
 
 import { ProductOverview } from 'components/UI/molecules';
 import { CategoryItems } from 'components/UI/molecules';

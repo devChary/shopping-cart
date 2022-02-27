@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 import { CustomButton } from 'components/UI/atoms';
 
-import { ShoppingCartContext } from '../../../../providers/shopping-cart/shoppingCart.providers';
+import { ShoppingCartContext } from 'providers/shopping-cart/shoppingCart.providers';
 
 import './cart-footer.styles.scss'
 

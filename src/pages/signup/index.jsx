@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import FormInput from '../../components/UI/atoms/form-input/form-input.component';
-import CustomButton from '../../components/UI/atoms/button/button.component';
+import FormInput from '../../components/UI/atoms/form-input';
+import CustomButton from '../../components/UI/atoms/button';
 
 import './signup.styles.scss';
 

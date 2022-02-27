@@ -5,7 +5,7 @@ import { CartHeader, CartItem } from 'components/UI/molecules';
 import { EmptyCartMessage } from 'components/UI/atoms';
 import { EmptyCartFooterOverview } from 'components/UI/organisms';
 
-import { ShoppingCartContext } from '../../../../providers/shopping-cart/shoppingCart.providers';
+import { ShoppingCartContext } from 'providers/shopping-cart/shoppingCart.providers';
 
 import './cart-dropdown.styles.scss'
 

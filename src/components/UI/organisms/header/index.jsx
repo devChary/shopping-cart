@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 
-import { CartDropdown } from 'components/UI/organisms';
-import { NavIcon, CartIcon } from 'components/UI/atoms';
+import CartDropdown from 'components/UI/organisms/cart-dropdown';
+import NavIcon from 'components/UI/atoms/nav-icon';
+import CartIcon from 'components/UI/atoms/cart-icon';
 
-import { ShoppingCartContext } from '../../../../providers/shopping-cart/shoppingCart.providers';
+import { ShoppingCartContext } from 'providers/shopping-cart/shoppingCart.providers';
 
 import './header.styles.scss';
 

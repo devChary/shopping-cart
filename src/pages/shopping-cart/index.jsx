@@ -15,7 +15,7 @@ const ShoppingCartPage = () => {
     return (
         <div className="cart-page">
             {
-                cartItems.length ? <CartHeader /> : null
+                cartItems.length && <CartHeader />
             }
 
             <div className='cart-page__cart-items' style={!cartItems.length ? { maxHeight: '100%' } : {}}>
