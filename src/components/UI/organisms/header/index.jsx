@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 
-import { CartDropdown } from 'components/UI/organisms';
-import { NavIcon, CartIcon } from 'components/UI/atoms';
+import CartDropdown from 'components/UI/organisms/cart-dropdown';
+import NavIcon from 'components/UI/atoms/nav-icon';
+import CartIcon from 'components/UI/atoms/cart-icon';
 
-import { ShoppingCartContext } from '../../../../providers/shopping-cart/shoppingCart.providers';
+import { ShoppingCartContext } from 'providers/shopping-cart/shoppingCart.providers';
 
 import './header.styles.scss';
 
@@ -20,8 +21,8 @@ const Header = ({ history }) => {
     }
 
     const { cartItemsCount, hidden, toggleHidden } = useContext(ShoppingCartContext);
-    const screenWidth = window.screen.width;
     const showCart = () => {
+        const screenWidth = window.screen.width;
         if (screenWidth <= 1024) {
             history.push('/shopping-cart');
             return;
@@ -33,10 +34,9 @@ const Header = ({ history }) => {
         <header className="header">
             <div className="items-wrapper">
                 <Link className="logo-container" to="/">
-                    <img src="/static/assets/logo.png" alt="Sabka Bazaar Logo" className="logo" />
-                    {/* <img srcSet="/static/assets/logo.png 0.5x, /static/assets/logo_2x.png 2x"
+                    <img className="logo" srcSet="/static/assets/logo_2x.png 768w, /static/assets/logo.png 480w"
                         src="/static/assets/logo.png"
-                        alt="Sabka Bazaar Logo" /> */}
+                        alt="Sabka Bazaar Logo" />
                 </Link>
 
                 <NavIcon />

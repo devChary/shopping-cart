@@ -1,8 +1,8 @@
 import { Switch } from 'react-router-dom';
 
 // Layout Components
-import Header from './components/UI/organisms/header/header.component';
-import Footer from './components/UI/organisms/footer/footer.component';
+import Header from './components/UI/organisms/header';
+import Footer from './components/UI/organisms/footer';
 
 import { WithSidebarRoute, WithoutSidebarRoute } from './components/HOCs/route-wrapper.component';
 

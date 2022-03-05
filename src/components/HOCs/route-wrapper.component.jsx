@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import Sidenav from '../UI/organisms/sidenav/sidenav.component';
+import {Sidenav} from 'components/UI/organisms';
 
 import './route-wrapper.styles.scss';
 

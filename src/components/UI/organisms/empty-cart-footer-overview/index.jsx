@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 import { CartFooter } from 'components/UI/molecules';
 import { PriceInfo, CustomButton } from 'components/UI/atoms';
 
-import { ShoppingCartContext } from '../../../../providers/shopping-cart/shoppingCart.providers';
+import { ShoppingCartContext } from 'providers/shopping-cart/shoppingCart.providers';
 
 const EmptyCartFooterOverview = ({ cartItems, history }) => {
 

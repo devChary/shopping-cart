@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchData } from '../../utils/api-methods/api-methods';
+import {fetchData} from 'utils/api-methods';
 
 import { BannerSlider, CategoryList } from 'components/UI/molecules';
 
