@@ -6,7 +6,7 @@ let mode = 'development';
 if (process.env.NODE_ENV === 'production') mode = 'production';
 
 module.exports = {
-    entry: path.resolve(__dirname, 'src', 'index.js'),
+    entry: path.resolve(__dirname, './src', 'index.js'),
     mode,
     output: {
         path: path.resolve(__dirname, 'dist'),
