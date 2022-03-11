@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import FormInput from '../../components/UI/atoms/form-input';
-import CustomButton from '../../components/UI/atoms/button';
+import FormInput from 'components/UI/atoms/form-input';
+import CustomButton from 'components/UI/atoms/button';
 
 import './signup.styles.scss';
 
@@ -24,6 +24,7 @@ const SignupPage = () => {
         const { value, name } = e.target;
         setUser({ ...user, [name]: value });
     }
+    
     return (
         <div className="signup">
             <div className="signup__header">

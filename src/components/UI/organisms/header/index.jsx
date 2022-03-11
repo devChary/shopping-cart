@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { withRouter } from 'react-router';
+import {withRouter} from 'components/HOCs/withRouter'
 import { Link } from 'react-router-dom';
 
 import CartDropdown from 'components/UI/organisms/cart-dropdown';

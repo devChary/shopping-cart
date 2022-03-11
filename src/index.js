@@ -6,7 +6,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-
 import ShoppingCartProvider from './providers/shopping-cart/shoppingCart.providers';
 
 ReactDOM.render(

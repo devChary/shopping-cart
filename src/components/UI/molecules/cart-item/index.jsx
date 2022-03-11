@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { ShoppingCartContext } from '../../../../providers/shopping-cart/shoppingCart.providers';
+import { ShoppingCartContext } from 'providers/shopping-cart/shoppingCart.providers';
 
 import { CustomButton } from 'components/UI/atoms';
 

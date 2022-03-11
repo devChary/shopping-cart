@@ -14,6 +14,7 @@ const Homepage = () => {
     }, []);
 
     const apiRequest = async () => {
+        
         const bannerArr = await fetchData(`/banners`);
         setBanners(bannerArr)
 

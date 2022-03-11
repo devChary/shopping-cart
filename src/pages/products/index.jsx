@@ -11,7 +11,6 @@ export const ProductsContext = createContext();
 
 const ProductsPage = ({ match }) => {
     const [products, setProducts] = useState([]);
-
     useEffect(() => {
         apiRequest();
     }, []);
@@ -27,10 +26,12 @@ const ProductsPage = ({ match }) => {
                 <Route exact path={`${match.path}`} component={() =>
                     <ProductOverview products={products} />} />
 
-                <Route path={`${match.path}/:categoryName`} component={(routeProps) =>
-                    <CategoryItems products={products} routeProps={routeProps} />} />
+                 <Route path={`${match.path}/:categoryName`}  render={(props) => <CategoryItems products={products} routeProps={props} />} />
             </ProductsContext.Provider>
         </div>
     )
 }
 export default ProductsPage;
+
+                // <Route path={`${match.path}/:categoryName`} component={(routeProps) =>
+                //     <CategoryItems products={products} routeProps={routeProps} />} />

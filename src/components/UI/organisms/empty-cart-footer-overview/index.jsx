@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { withRouter } from 'react-router';
+import {withRouter} from 'components/HOCs/withRouter'
 
 import { CartFooter } from 'components/UI/molecules';
 import { PriceInfo, CustomButton } from 'components/UI/atoms';

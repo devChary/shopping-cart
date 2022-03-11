@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import FormInput from '../../components/UI/atoms/form-input';
-import CustomButton from '../../components/UI/atoms/button';
+import FormInput from 'components/UI/atoms/form-input';
+import CustomButton from 'components/UI/atoms/button';
 
 import './login.styles.scss';
 
@@ -13,7 +13,7 @@ const LoginPage = () => {
         fontSize: '1.6rem',
         marginTop: '1rem'
     }
-    const [user, setUser] = useState({ email: '', password: '' })
+    const [user, setUser] = useState({ email: '', password: '' });
 
     const handleSubmit = (e) => {
         e.preventDefault();

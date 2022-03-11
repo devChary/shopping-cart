@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { withRouter } from 'react-router';
+import {withRouter} from 'components/HOCs/withRouter'
 
 import { CartHeader, CartItem } from 'components/UI/molecules';
 import { EmptyCartMessage } from 'components/UI/atoms';

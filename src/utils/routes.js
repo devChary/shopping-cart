@@ -5,7 +5,6 @@ import SignupPage from "pages/signup";
 import ShoppingCartPage from "pages/shopping-cart";
 
 const routes = {
-
     withoutSidebarRoutes: [
         {
             path: "/",
