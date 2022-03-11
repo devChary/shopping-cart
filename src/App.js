@@ -1,4 +1,5 @@
-import { Routes } from 'react-router';
+import { Routes, Route } from 'react-router';
+import '../public/favicon.ico';
 
 // Layout Components
 import Header from 'components/UI/organisms/header';
@@ -21,12 +22,12 @@ function App() {
         <Routes>
           {
             withoutSidebarRoutes.map(route => (
-              <WithoutSidebarRoute key={route.path} {...route} />
+              <Route key={route.path} path=":id"  {...route} element={<WithoutSidebarRoute />} />
             ))
           }
           {
             withSidebarRoutes.map(route => (
-              <WithSidebarRoute key={route.path} {...route} />
+              <Route key={route.path} path=":id"  {...route} element={<WithSidebarRoute />} />
             ))
           }
         </Routes>

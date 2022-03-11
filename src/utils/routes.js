@@ -7,29 +7,29 @@ import ShoppingCartPage from "pages/shopping-cart";
 const routes = {
     withoutSidebarRoutes: [
         {
-            path: "/",
+            path: "/*",
             component: Homepage,
             exact: true,
         },
         {
-            path: "/login",
+            path: "/login/*",
             component: LoginPage,
             exact: true,
         },
         {
-            path: "/signup",
+            path: "/signup/*",
             component: SignupPage,
             exact: true,
         },
         {
-            path: "/shopping-cart",
+            path: "/shopping-cart/*",
             component: ShoppingCartPage,
             exact: true,
         },
     ],
     withSidebarRoutes: [
         {
-            path: "/products",
+            path: "/products/*",
             component: ProductsPage,
         },
     ]

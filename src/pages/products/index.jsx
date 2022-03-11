@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import  {fetchData} from 'utils/api-methods';
 
 import { ProductOverview } from 'components/UI/molecules';
@@ -23,15 +23,14 @@ const ProductsPage = ({ match }) => {
     return (
         <div className='products-page'>
             <ProductsContext.Provider value={products}>
-                <Route exact path={`${match.path}`} component={() =>
-                    <ProductOverview products={products} />} />
+                <Routes>
+                    <Route exact path={`${match.path}`} component={() =>
+                        <ProductOverview products={products} />} />
 
-                 <Route path={`${match.path}/:categoryName`}  render={(props) => <CategoryItems products={products} routeProps={props} />} />
+                    <Route path={`${match.path}/:categoryName`}  render={(props) => <CategoryItems products={products} routeProps={props} />} />
+                </Routes>
             </ProductsContext.Provider>
         </div>
     )
 }
 export default ProductsPage;
-
-                // <Route path={`${match.path}/:categoryName`} component={(routeProps) =>
-                //     <CategoryItems products={products} routeProps={routeProps} />} />
